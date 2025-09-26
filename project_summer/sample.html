@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dark Mode Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          animation: {
+            'infinite-scroll': 'infinite-scroll 25s linear infinite'
+          },
+          keyframes: {
+            'infinite-scroll': {
+              from: { transform: 'translateX(0)' },
+              to: { transform: 'translateX(-100%)' }
+            }
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    * {
+      transition: background-color 0.5s ease, color 0.5s ease;
+    }
+  </style>
+</head>
+<body class="bg-white text-black dark:bg-gray-900 dark:text-white min-h-screen selection:text-cyan-500 transition-colors duration-500">
+
+  <nav class="z-40 fixed top-0 right-0 left-0 flex justify-between items-center px-6 bg-neutral-300 dark:bg-neutral-800 dark:shadow-cyan-500/50 w-full h-16 shadow-lg">
+    <div class="flex gap-10 text-md font-medium">
+      <a href="#" class="hover:text-cyan-500 transition-colors">About</a>
+      <a href="#" class="hover:text-cyan-500 transition-colors">Skills</a>
+      <a href="#" class="hover:text-cyan-500 transition-colors">Projects</a>
+      <a href="#" class="hover:text-cyan-500 transition-colors">Contact</a>
+    </div>
+    <div 
+      id="theme-toggle"
+      onclick="toggleTheme()"
+      class="flex items-center justify-center shadow-lg shadow-cyan-500/50 bg-gray-700 text-white w-10 h-10 rounded-full cursor-pointer hover:bg-cyan-600 transition-all active:duration-300 ease-in-out transform focus:ring-2 focus:ring-white dark:focus:ring-gray-800"
+      title="Toggle Dark Mode">
+    </div>
+  </nav>
+
+  <section class="text-black bg-white dark:text-gray-200 dark:bg-gray-900 body-font">
+    <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+      <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+        <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium">
+          <span class="bg-gradient-to-r from-cyan-400 via-orange-500 to-purple-600 bg-clip-text text-transparent select-text hover:text-5xl transition-all delay-100 duration-200">JYOTHIRMAYI TULLI</span>
+          <br class="hidden lg:inline-block" />
+          <span class="hover:text-indigo-500 hover:text-5xl transition-all delay-100 duration-200">FULLSTACK </span>
+          <span class="hover:text-indigo-500 hover:text-5xl transition-all delay-100 duration-200">DEVELOPER</span>
+        </h1>
+        <p class="mb-8 text-justify leading-relaxed">
+          I am an enthusiastic and driven computer engineering student with a strong passion for technology and innovation. I am eager to secure a responsible position at a multinational corporation (MNC) where I can contribute to impactful projects while honing my technical and problem-solving skills. I’m currently focused on strengthening my problem-solving abilities and working on personal projects using the MERN stack. I enjoy bringing ideas to life through code and continuously learning about new tools in the tech space. I aspire to build a strong foundation in the industry and enrich my resume with meaningful achievements and contributions.
+        </p>
+      </div>
+      <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 drop-shadow-md">
+        <img class="object-cover object-center rounded-full shadow-lg shadow-black/40 dark:shadow-cyan-500/100 transition-shadow duration-300" alt="Profile Image" src="../project_summer/li.jpg"/>
+      </div>
+    </div>
+  </section>
+
+  <section class="text-black bg-white dark:text-gray-200 dark:bg-gray-900 body-font">
+    <div class="container mx-auto px-5 pb-10">
+      <h1 class="text-4xl font-bold text-center mb-12">SKILLS</h1>
+      <div class="w-full inline-flex flex-nowrap h-96 overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]">
+        <ul class="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll">
+          <li><img src="../project_summer/html5.png" alt="HTML5 Logo" class="w-24 h-24"/></li>
+          <li><img src="../project_summer/css3.png" alt="CSS3 Logo" class="w-24 h-24"/></li>
+          <li><img src="../project_summer/js.png" alt="JavaScript Logo" class="w-24 h-24"/></li>
+          <li><img src="../project_summer/bstrp.jpeg" alt="Bootstrap Logo" class="w-24 h-24"/></li>
+          <li><img src="../project_summer/js.png" alt="JavaScript Logo" class="w-24 h-24"/></li>
+          <li><img src="../project_summer/tailwind.jpg" alt="Tailwind CSS Logo" class="w-24 h-24"/></li>
+          <li><img src="../project_summer/react.png" alt="React Logo" class="w-24 h-24"/></li>
+          <li><img src="../project_summer/node.png" alt="Node.js Logo" class="w-24 h-24"/></li>
+        </ul>
+        <ul class="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll" aria-hidden="true">
+          <li><img src="../project_summer/html5.png" alt="HTML5 Logo" class="w-24 h-24"/></li>
+          <li><img src="../project_summer/css3.png" alt="CSS3 Logo" class="w-24 h-24"/></li>
+          <li><img src="../project_summer/js.png" alt="JavaScript Logo" class="w-24 h-24"/></li>
+          <li><img src="../project_summer/bstrp.jpeg" alt="Bootstrap Logo" class="w-24 h-24"/></li>
+          <li><img src="../project_summer/js.png" alt="JavaScript Logo" class="w-24 h-24"/></li>
+          <li><img src="../project_summer/tailwind.jpg" alt="Tailwind CSS Logo" class="w-24 h-24"/></li>
+          <li><img src="../project_summer/react.png" alt="React Logo" class="w-24 h-24"/></li>
+          <li><img src="../project_summer/node.png" alt="Node.js Logo" class="w-24 h-24"/></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const toggleBtn = document.getElementById('theme-toggle');
+
+    function setIcon() {
+      const isDark = document.documentElement.classList.contains('dark');
+      toggleBtn.innerHTML = isDark
+        ? `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 animate-pulse" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+             <path stroke-linecap="round" stroke-linejoin="round"
+              d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 
+              18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 
+              12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
+           </svg>`
+        : `<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 animate-pulse" fill="currentColor" viewBox="0 0 16 16">
+             <path d="M14.438 10.148c.19-.425-.321-.787-.748-.601A5.5 5.5 0 0 1 6.453 2.31c.186-.427-.176-.938-.6-.748a6.501 
+             6.501 0 1 0 8.585 8.586Z"/>
+           </svg>`;
+    }
+
+    function toggleTheme() {
+      document.documentElement.classList.toggle('dark');
+      setIcon();
+    }
+
+    setIcon(); // initialize on load
+  </script>
+
+</body>
+</html>
